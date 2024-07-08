@@ -8,4 +8,6 @@ spec:
       storage: 2Gi
   volumeMode: Filesystem
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteOnce     # ReadWriteOnce - Can be accessed by a single node
+                        # ReadOnlyMany - Multiple nodes can read from this
+                        # ReadWriteMany - Can be read and written to by many nodes 
