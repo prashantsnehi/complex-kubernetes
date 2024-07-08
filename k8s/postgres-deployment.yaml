@@ -12,12 +12,20 @@ spec:
       labels:
         component: postgres
     spec:
+      volumes: 
+        - name: postgres-storage
+          persistentVolumeClaim: 
+            claimName: database-persistent-volume-claim   # name mentioned in the database-persistent-volume-claim.yaml file
       containers:
       - name: postgres
         image: postgres
         ports:
-        - containerPort: 5432
+          - containerPort: 5432
         # resources:
         #   limits:
         #     memory: "128Mi"
         #     cpu: "500m"
+        volumeMounts: 
+          - name: postgres-storage
+            mountPath: /var/lib/postgresql/data
+            subPath: postgres
