@@ -34,3 +34,11 @@ spec:
               value: '5432'
             - name: PGDATABASE
               value: postgres
+            - name: POSTGRES_PASSWORD
+              valueFrom: 
+                secretKeyRef:
+                  name: pgpassword 
+                  key: PGPASSWORD
+
+# command to create secret
+# kubectl create secret generic pgpassword --from-literal PGPASSWORD=postgrespassword
