@@ -15,7 +15,7 @@ spec:
       containers:
         - name: server
           image: psnehi/multi-worker
-          resources:
-            limits:
-              memory: "128Mi"
-              cpu: "500m"
+          # resources:
+          #   limits:
+          #     memory: "128Mi"
+          #     cpu: "500m"

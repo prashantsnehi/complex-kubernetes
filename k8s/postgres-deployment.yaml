@@ -15,9 +15,28 @@ spec:
       containers:
       - name: postgres
         image: postgres
+        ports:
+        - containerPort: 5432
         # resources:
         #   limits:
         #     memory: "128Mi"
         #     cpu: "500m"
-        ports:
-        - containerPort: 5432
+# ---
+# apiVersion: v1
+# kind: PersistentVolume
+# metadata:
+#   name: postgres-volume
+# spec:
+#   capacity:
+#     storage: <Size>
+#   volumeMode: Filesystem
+#   accessModes:
+#     - ReadWriteOnce
+#   persistentVolumeReclaimPolicy: Recycle
+#   storageClassName: slow
+#   mountOptions:
+#     - hard
+#     - nfsvers=4.1
+#   nfs:
+#     path: /tmp
+#     server: 172.17.0.2
