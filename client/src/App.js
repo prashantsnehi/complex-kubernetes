@@ -1,16 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import OtherPage from './OtherPage';
-import Fib from './Fib';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import OtherPage from "./OtherPage";
+import Fib from "./Fib";
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <header className="App-header">
+        {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
+          <p></p>
           <a
             className="App-link"
             href="https://reactjs.org"
@@ -21,8 +22,12 @@ function App() {
           </a>
           <Link to="/">Home</Link>
           <Link to="/otherpage">Other Page</Link>
-        </header>
-        <div>
+        </header> */}
+        <div className="navbar">
+          <Link to="/">Home</Link>
+          <Link to="/otherpage">Other Page</Link>
+        </div>
+        <div className="fib">
           <Route exact path="/" component={Fib} />
           <Route path="/otherpage" component={OtherPage} />
         </div>
