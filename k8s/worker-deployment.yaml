@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: server
-          image: psnehi/multi-worker
+          image: rallycoding/multi-worker
           env: 
             - name: REDIS_HOST
               value: redis-cluster-ip-service # name provided in redis-cluster-ip-service

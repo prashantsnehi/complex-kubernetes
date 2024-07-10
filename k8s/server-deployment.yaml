@@ -14,7 +14,8 @@ spec:
     spec:
       containers:
         - name: server
-          image: psnehi/multi-server
+          image: psnehi/multi-server:v10
+          #image: rallycoding/multi-server
           # resources:
           #   limits:
           #     memory: "128Mi"
@@ -34,10 +35,10 @@ spec:
               value: '5432'
             - name: PGDATABASE
               value: postgres
-            - name: POSTGRES_PASSWORD
+            - name: PGPASSWORD
               valueFrom: 
                 secretKeyRef:
-                  name: pgpassword 
+                  name: pgpasswords 
                   key: PGPASSWORD
 
 # command to create secret
