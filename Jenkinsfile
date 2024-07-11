@@ -5,6 +5,7 @@ pipeline {
         CLUSTER_NAME = 'multi-client'
         LOCATION = 'asia-south1-a'
         CREDENTIALS_ID = 'multi-k8s'
+        BUILD_ID='latest'
     }
     stages {
         stage("Checkout code") {
@@ -31,7 +32,8 @@ pipeline {
         // }        
         stage('Deploy to GKE') {
             steps{
-                sh "sed -i 's/hello:latest/hello:${env.BUILD_ID}/g' deployment.yaml"
+                echo '${env.BUILD_ID}'
+                // sh "sed -i 's/hello:latest/hello:${env.BUILD_ID}/g' deployment.yaml"
                 step([$class: 'KubernetesEngineBuilder', 
                     projectId: env.PROJECT_ID, 
                     clusterName: env.CLUSTER_NAME, 

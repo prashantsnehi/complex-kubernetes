@@ -82,7 +82,7 @@ spec:
                   name: pgpasswords 
                   key: PGPASSWORD
 # command to create secret
-# kubectl create secret generic pgpassword --from-literal PGPASSWORD=postgrespassword
+# kubectl create secret generic pgpassword --from-literal PGPASSWORD=postgrespasswords
 ---
 # server service file
 apiVersion: v1
