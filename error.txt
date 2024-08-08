@@ -1,0 +1,11 @@
+zsh: command not found: kubect
+zsh: command not found: kubect
+NAME                                  READY   STATUS    RESTARTS     AGE     IP           NODE             NOMINATED NODE   READINESS GATES
+client-deployment-778c969888-4fcxn    1/1     Running   1 (8h ago)   35h     10.1.1.149   docker-desktop   <none>           <none>
+client-deployment-778c969888-mcxpk    1/1     Running   1 (8h ago)   35h     10.1.1.138   docker-desktop   <none>           <none>
+postgres-deployment-86db9c9c5-wbmd7   1/1     Running   1 (8h ago)   3d16h   10.1.1.143   docker-desktop   <none>           <none>
+redis-deployment-95c575fc6-psn45      1/1     Running   1 (8h ago)   3d16h   10.1.1.146   docker-desktop   <none>           <none>
+server-deployment-665c969f5d-787bz    1/1     Running   1 (8h ago)   3d16h   10.1.1.139   docker-desktop   <none>           <none>
+server-deployment-665c969f5d-dz4kl    1/1     Running   1 (8h ago)   3d16h   10.1.1.135   docker-desktop   <none>           <none>
+server-deployment-665c969f5d-s5djs    1/1     Running   1 (8h ago)   3d16h   10.1.1.148   docker-desktop   <none>           <none>
+worker-deployment-8575f8c59b-zmfzs    1/1     Running   1 (8h ago)   3d16h   10.1.1.141   docker-desktop   <none>           <none>
