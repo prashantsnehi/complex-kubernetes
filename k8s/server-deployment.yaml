@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: server
-          image: psnehi/multi-server:v10
+          image: psnehi/multi-server:v4
           #image: rallycoding/multi-server
           # resources:
           #   limits:
